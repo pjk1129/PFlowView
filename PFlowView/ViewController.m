@@ -80,15 +80,17 @@
                                           cancelButtonTitle:nil
                                           otherButtonTitles:@"确定", nil];
     [alert show];
+    
 }
 
 
 #pragma mark - getter
 - (PFlowView *)flowView{
     if (!_flowView) {
-        _flowView = [[PFlowView alloc] initWithFrame:CGRectMake(20, 40, 250, 340)];
+        _flowView = [[PFlowView alloc] initWithFrame:CGRectMake(0, 0, 250, 340)];
         _flowView.dataSource = self;
         _flowView.delegate = self;
+        _flowView.center = CGPointMake(floorf(CGRectGetWidth(self.view.frame)/2)-15, floorf(CGRectGetHeight(self.view.frame)/2)-10);
     }
     return _flowView;
 }

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E7135C59-CDDD-4C67-B7BF-A7BBB741A4F3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PFlowView</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>945695AF-73F3-4DB4-AAEF-0A8A7A55324A</key>
+		<string>https://github.com/pjk1129/PFlowView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PFlowView.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>945695AF-73F3-4DB4-AAEF-0A8A7A55324A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/pjk1129/PFlowView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>945695AF-73F3-4DB4-AAEF-0A8A7A55324A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>945695AF-73F3-4DB4-AAEF-0A8A7A55324A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PFlowView</string>
+		</dict>
+	</array>
+</dict>
+</plist>
