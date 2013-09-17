@@ -1,12 +1,12 @@
 PFlowView
 =========
 
-Screenshots (Demo App + one real life example)
+Screenshots (Demo App)
 
 ----------------------------------------------
-<img  width="640" height="960" src="https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image0.PNG?raw=true"/> 
-<img  width="640" height="960" src="https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image1.PNG?raw=true"/> 
-<img  width="640" height="960" src="https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image2.PNG?raw=true"/> 
+<img  src="https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image0.PNG?raw=true"/> 
+<img  src="https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image1.PNG?raw=true"/> 
+<img  src="https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image2.PNG?raw=true"/> 
 
 ----------------------------------------------
 ![github](https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image0IOS7.png?raw=true "github")
