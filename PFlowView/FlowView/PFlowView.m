@@ -20,6 +20,8 @@ static const NSUInteger kMaxNumberItemsInView = 7;
 @property (nonatomic, retain) UIScrollView   *scrollView;
 @property (nonatomic, retain) UIView         *moveView;
 
+@property (nonatomic, assign) NSInteger      lastIndexSelected;
+
 @end
 
 @implementation PFlowView
@@ -41,6 +43,7 @@ static const NSUInteger kMaxNumberItemsInView = 7;
 @synthesize numberTotalItems = _numberTotalItems;
 
 @synthesize reusablePFlowViewCells = _reusablePFlowViewCells;
+@synthesize lastIndexSelected = _lastIndexSelected;
 
 - (void)dealloc{
     self.dataSource = nil;
@@ -374,16 +377,23 @@ static const NSUInteger kMaxNumberItemsInView = 7;
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView //滚动结束处理
 {
-    [self loadRequiredItems];
-    [self relayoutItems];
-    
-    NSLog(@"%@",[self.scrollView subviews]);
+    self.lastIndexSelected = self.currentIndex;
 }
 
 - (void)handleTapGesture:(UIGestureRecognizer *)gesture
 {
     if([_delegate respondsToSelector:@selector(pFlowView:didSelectItemAtIndex:)]){
         [_delegate pFlowView:self didSelectItemAtIndex:self.currentIndex];
+    }
+}
+
+#pragma mark - setter
+- (void)setLastIndexSelected:(NSInteger)lastIndexSelected{
+    if (_lastIndexSelected != lastIndexSelected) {
+        _lastIndexSelected = lastIndexSelected;
+        
+        [self loadRequiredItems];
+        [self relayoutItems];
     }
 }
 
