@@ -147,14 +147,14 @@ static const NSUInteger kMaxNumberItemsInView = 7;
     }
     
     //加载循环
-    for(NSInteger i=startIndex; i<endIndex; i++){
+    for(NSInteger i=startIndex; i<=endIndex; i++){
         if (i >=0) {
             [self insertObjectAtIndex:i];
         }
     }
     
     [self cleanupUnseenItems];
-    
+
     //设置滚动视图属性
     if(self.numberTotalItems > 1){
         self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.scrollView.frame)*self.numberTotalItems,
@@ -170,8 +170,6 @@ static const NSUInteger kMaxNumberItemsInView = 7;
     float offset_x = self.scrollView.contentOffset.x;
     float width = self.scrollView.frame.size.width; //视图宽度
     float height = self.scrollView.frame.size.height; //高度
-    
-    self.currentIndex = roundf(offset_x/width); //得到索引
     
     //改变视图角度
     for (PFlowViewCell *pCell in [self.scrollView subviews]) {
@@ -231,7 +229,7 @@ static const NSUInteger kMaxNumberItemsInView = 7;
         [self removeObjectAtIndex:i];
     }
     
-    for (NSInteger i=self.currentIndex+5; i<self.numberTotalItems; i++) {
+    for (NSInteger i=self.currentIndex+6; i<self.numberTotalItems; i++) {
         [self removeObjectAtIndex:i];
     }
 }
@@ -259,6 +257,10 @@ static const NSUInteger kMaxNumberItemsInView = 7;
 #pragma mark - insert/remove object at index
 - (void)insertObjectAtIndex:(NSInteger)index
 {
+    if (index <0 || index>=self.numberTotalItems) {
+        return;
+    }
+    
     PFlowViewCell  *cell = [self cellForItemAtIndex:index];
     if (!cell) {
         CGSize viewSize = self.frame.size;
@@ -266,29 +268,29 @@ static const NSUInteger kMaxNumberItemsInView = 7;
         
         //加载滚动视图数据
         CGPoint point = CGPointMake(index*width, 0); //坐标
-        PFlowViewCell  *cell = [self.dataSource pFlowView:self cellForItemAtIndex:index];
-        cell.tag = index+kTagOffset;
-        cell.frame = CGRectMake(point.x, point.y, viewSize.width, viewSize.height);
-        cell.layer.transform = CATransform3DMakeRotation(self.angleValue, 0, -1, 0);//设置角度
+        PFlowViewCell  *cell1 = [self.dataSource pFlowView:self cellForItemAtIndex:index];
+        cell1.tag = index+kTagOffset;
+        cell1.frame = CGRectMake(point.x, point.y, viewSize.width, viewSize.height);
+        cell1.layer.transform = CATransform3DMakeRotation(self.angleValue, 0, -1, 0);//设置角度
         if (index!=self.currentIndex) {
-            cell.hidden = YES;
+            cell1.hidden = YES;
         }else{
-            cell.hidden = NO;
+            cell1.hidden = NO;
         }
         
         //设置图片的阴影
-        UIBezierPath* shadowPath = [UIBezierPath bezierPathWithRect:cell.bounds];
-        cell.layer.shadowPath = shadowPath.CGPath;
-        cell.layer.shadowOffset = CGSizeMake(self.shadowValueX, self.shadowValueY);
-        cell.layer.shadowOpacity = self.shadowAlpha;
+        UIBezierPath* shadowPath = [UIBezierPath bezierPathWithRect:cell1.bounds];
+        cell1.layer.shadowPath = shadowPath.CGPath;
+        cell1.layer.shadowOffset = CGSizeMake(self.shadowValueX, self.shadowValueY);
+        cell1.layer.shadowOpacity = self.shadowAlpha;
         //设置边框
         if(self.borderColor){
-            cell.layer.borderColor = self.borderColor.CGColor;
-            cell.layer.borderWidth = 2.f;
+            cell1.layer.borderColor = self.borderColor.CGColor;
+            cell1.layer.borderWidth = 2.f;
         }else{
-            cell.layer.borderWidth = 0.f;
+            cell1.layer.borderWidth = 0.f;
         }
-        [self.scrollView addSubview:cell];
+        [self.scrollView addSubview:cell1];
 
         // 设置每张图片的坐标，z值和透明度
         CGPoint pointMove = CGPointMake(index*viewSize.width/self.xMarginValue, 0);
@@ -390,11 +392,32 @@ static const NSUInteger kMaxNumberItemsInView = 7;
 #pragma mark - setter
 - (void)setLastIndexSelected:(NSInteger)lastIndexSelected{
     if (_lastIndexSelected != lastIndexSelected) {
+        
+        BOOL  forward = YES;
+        if (lastIndexSelected >= _lastIndexSelected) {
+            forward = NO;
+        }
+
         _lastIndexSelected = lastIndexSelected;
         
-        [self loadRequiredItems];
+        NSInteger  index = self.currentIndex+5;
+        if (forward) {
+            index = self.currentIndex-2;
+        }
+        [self addItemsIfNeededAtIndex:index];
+
         [self relayoutItems];
     }
+}
+
+- (void)addItemsIfNeededAtIndex:(NSInteger)index
+{
+    if (index <0 || index>=self.numberTotalItems) {
+        return;
+    }
+
+    [self insertObjectAtIndex:index];
+    [self cleanupUnseenItems];
 }
 
 #pragma mark - getter
