@@ -3,12 +3,10 @@ PFlowView
 
 Screenshots (Demo App + one real life example)
 
-<a href="https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/0.png">
-<img src="https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/0.png"/>
-</a>
-<a href="https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/1.png">
-<img src="https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/1.png"/>
-</a>
+![github](https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image0.PNG "github")  
+![github](https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image1.PNG "github")  
+![github](https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image2.PNG "github")  
+
 ----------------------------------------------
 
 Features:
