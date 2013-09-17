@@ -9,6 +9,12 @@
 /*
  1.如果锯齿明显需要抗锯齿效果，在项目plist文件中配置Renders with edge antialisasing为YES
  2.需要往项目中添加 QuartzCore.framework 框架， 才能正确运行
+ 
+ PFlowView目的志在为业内初学者提供一种图片浏览效果的思路，在这个小demo开发过程中，
+ 不可避免可能会有雷同之处，在README.md中Reference处有该工程参考和使用的一些开源项目。
+ 另外，希望更多的网友，能对此加工，优化代码，修复潜在的bug。
+ 
+ 欢迎大家技术/业内动态交流！
 */
 
 #import <UIKit/UIKit.h>
