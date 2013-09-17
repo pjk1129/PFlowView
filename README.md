@@ -3,11 +3,20 @@ PFlowView
 
 Screenshots (Demo App + one real life example)
 
-![github](https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image0.PNG "github")  
-![github](https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image1.PNG "github")  
-![github](https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image2.PNG "github")  
+----------------------------------------------
+
+![image](https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image0.PNG)
+![image](https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image1.PNG)
+![image](https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image2.PNG)
 
 ----------------------------------------------
+
+![image](https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image0IOS7.png)
+![image](https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image1IOS7.png)
+![image](https://github.com/pjk1129/PFlowView/blob/master/PFlowView/res/image2IOS7.png)
+  
+----------------------------------------------
+
 
 Features:
 * Reusable cells
