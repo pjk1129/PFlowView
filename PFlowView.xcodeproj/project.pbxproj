@@ -17,6 +17,12 @@
 		851997D417E1E12B00C4E98E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851997D317E1E12B00C4E98E /* QuartzCore.framework */; };
 		8519980517E1F46B00C4E98E /* PFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8519980417E1F46B00C4E98E /* PFlowView.m */; };
 		85B02E8217E7596F00D14372 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 85B02E8117E7596F00D14372 /* README.md */; };
+		930A783217E83899009F0DC3 /* image0.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 930A782C17E83899009F0DC3 /* image0.PNG */; };
+		930A783317E83899009F0DC3 /* image0IOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 930A782D17E83899009F0DC3 /* image0IOS7.png */; };
+		930A783417E83899009F0DC3 /* image1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 930A782E17E83899009F0DC3 /* image1.PNG */; };
+		930A783517E83899009F0DC3 /* image1IOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 930A782F17E83899009F0DC3 /* image1IOS7.png */; };
+		930A783617E83899009F0DC3 /* image2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 930A783017E83899009F0DC3 /* image2.PNG */; };
+		930A783717E83899009F0DC3 /* image2IOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 930A783117E83899009F0DC3 /* image2IOS7.png */; };
 		93DF02CE17E6882500C5EAFD /* NSData+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DF02B617E6882500C5EAFD /* NSData+GIF.m */; };
 		93DF02CF17E6882500C5EAFD /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DF02B817E6882500C5EAFD /* SDImageCache.m */; };
 		93DF02D017E6882500C5EAFD /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DF02BA17E6882500C5EAFD /* SDWebImageCompat.m */; };
@@ -58,6 +64,12 @@
 		8519980317E1F46B00C4E98E /* PFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFlowView.h; sourceTree = "<group>"; };
 		8519980417E1F46B00C4E98E /* PFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFlowView.m; sourceTree = "<group>"; };
 		85B02E8117E7596F00D14372 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
+		930A782C17E83899009F0DC3 /* image0.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image0.PNG; sourceTree = "<group>"; };
+		930A782D17E83899009F0DC3 /* image0IOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image0IOS7.png; sourceTree = "<group>"; };
+		930A782E17E83899009F0DC3 /* image1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.PNG; sourceTree = "<group>"; };
+		930A782F17E83899009F0DC3 /* image1IOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1IOS7.png; sourceTree = "<group>"; };
+		930A783017E83899009F0DC3 /* image2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2.PNG; sourceTree = "<group>"; };
+		930A783117E83899009F0DC3 /* image2IOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2IOS7.png; sourceTree = "<group>"; };
 		93DF02B517E6882500C5EAFD /* NSData+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+GIF.h"; sourceTree = "<group>"; };
 		93DF02B617E6882500C5EAFD /* NSData+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+GIF.m"; sourceTree = "<group>"; };
 		93DF02B717E6882500C5EAFD /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
@@ -187,6 +199,12 @@
 		851997EC17E1EEB700C4E98E /* res */ = {
 			isa = PBXGroup;
 			children = (
+				930A782C17E83899009F0DC3 /* image0.PNG */,
+				930A782D17E83899009F0DC3 /* image0IOS7.png */,
+				930A782E17E83899009F0DC3 /* image1.PNG */,
+				930A782F17E83899009F0DC3 /* image1IOS7.png */,
+				930A783017E83899009F0DC3 /* image2.PNG */,
+				930A783117E83899009F0DC3 /* image2IOS7.png */,
 				93F06A9817E55F90000D2FF7 /* Default-568h@2x.png */,
 				93F06A9917E55F90000D2FF7 /* Default.png */,
 				93F06A9A17E55F90000D2FF7 /* Default@2x.png */,
@@ -280,11 +298,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				930A783217E83899009F0DC3 /* image0.PNG in Resources */,
 				93F06AA217E55F90000D2FF7 /* Icon.png in Resources */,
+				930A783317E83899009F0DC3 /* image0IOS7.png in Resources */,
+				930A783517E83899009F0DC3 /* image1IOS7.png in Resources */,
+				930A783417E83899009F0DC3 /* image1.PNG in Resources */,
 				93F06AA117E55F90000D2FF7 /* Icon-120@2x.png in Resources */,
 				93F06AA317E55F90000D2FF7 /* Icon@2x.png in Resources */,
 				93F06AA017E55F90000D2FF7 /* Default@2x.png in Resources */,
 				851997BB17E1E10F00C4E98E /* InfoPlist.strings in Resources */,
+				930A783617E83899009F0DC3 /* image2.PNG in Resources */,
+				930A783717E83899009F0DC3 /* image2IOS7.png in Resources */,
 				93F06A9F17E55F90000D2FF7 /* Default.png in Resources */,
 				93F06A9E17E55F90000D2FF7 /* Default-568h@2x.png in Resources */,
 				85B02E8217E7596F00D14372 /* README.md in Resources */,
